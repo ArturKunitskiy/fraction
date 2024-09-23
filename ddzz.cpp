@@ -21,16 +21,38 @@ public:
 		numerator = rand() % 100;
 		denominator = rand() % 100 + 1;
 	}
+		void SetN(int _numerator)
+		{
+			numerator = _numerator;
+		}
+		void SetD(int _denominator)
+		{
+			denominator = _denominator;
+		}
+		int GetN() {
+			return numerator;
+		}
+		int GetD() {
+			return denominator;
+		}
 };
 
 int main()
 {
 	srand(time(0));
-	Fraction a;
-	a.Input(1, 2);
-	a.Print();
+	Fraction q;
+	q.Input(1, 2);
+	q.Print();
+	q.SetD(100);
+	q.Print();
+	int d = q.GetD();
+	cout << d << endl;
 
-	Fraction b;
-	b.Input();
-	b.Print();
+	Fraction x;
+	x.Input();
+	x.Print();
+	x.SetN(100);
+	x.Print();
+	int n = x.GetN();
+	cout << n << endl;
 }
